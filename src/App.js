@@ -48,7 +48,7 @@ const AuthStateApp = () => {
   (
     <AmplifyAuthenticator>
       <AmplifySignIn
-        headerText="Bauer Upload Tool"
+        headerText="S3 Upload Tool"
         usernameAlias="email"
         hideSignUp="true"
         slot="sign-in"
