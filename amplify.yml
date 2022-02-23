@@ -1,0 +1,34 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install
+
+        - ls -la
+        - echo "Entering on src folder..."
+        - cd src
+        # - ls -la
+        # - echo "showing old config.json"
+        # - cat config.json
+        # - rm config.json
+        - ls -la
+        - echo -e '{\n"cognito_region":"'$cognito_region'",\n"user_pools_id":"'$user_pools_id'",\n"user_pools_web_client_id":"'$user_pools_web_client_id'",\n"bucket":"'$bucket'",\n"identityPoolId":"'$identityPoolId'",\n"BucketPrefix":"'$BucketPrefix'"\n}' > config.json
+        - echo "After create config file"
+        - ls -la
+        - echo "showing new config.json"
+        - cat config.json
+        - cd ..
+
+        
+
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
