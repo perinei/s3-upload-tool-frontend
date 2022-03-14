@@ -87,7 +87,7 @@ function S3page(props) {
         }
         const file = file1[0]
         try {
-            await Storage.put(nickname + "/" + file.name, file, {});
+            await Storage.put(email + "/" + file.name, file, {});
             await handleClickOpen(file.name)
             const result = await Storage.list('')
             document.getElementById('fileupload').value = ''
