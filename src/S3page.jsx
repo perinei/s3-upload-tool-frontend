@@ -138,7 +138,7 @@ function S3page(props) {
             headerName: 'File Name',
             width: 900,
             valueGetter: (params) =>
-                `${params.getValue(params.id, 'key').split('/')[1] || ''}`,
+                `${params.getValue(params.id, 'key').split('/')[2] || ''}`,
             headerClassName: 'super-app-theme--header',
 
         },
