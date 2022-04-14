@@ -19,7 +19,6 @@ Amplify.configure({
     },
   },
 
-
   Auth: {
     identityPoolId: config.identityPoolId
   },
