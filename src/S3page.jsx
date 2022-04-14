@@ -87,7 +87,9 @@ function S3page(props) {
         }
         const file = file1[0]
         try {
-            await Storage.put(email + "/" + nickname + "/" + file.name, file, {});
+            file_with_spaces = file.name
+            file_no_spaces = file_with_spaces(" ","_")
+            await Storage.put(email + "/" + nickname + "/" + file_no_spaces, file, {});
             await handleClickOpen(file.name)
             const result = await Storage.list('')
             document.getElementById('fileupload').value = ''
