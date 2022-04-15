@@ -10,7 +10,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { DataGrid } from '@material-ui/data-grid'
 import './App.css';
 
-const grayscale = 200
+const grayscale = 199
 const graycolor = 'rgba(' + grayscale + ', ' + grayscale + ',' + grayscale + ', 0.9)'
 const useStyles = makeStyles({
     root: {
